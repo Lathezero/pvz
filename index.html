@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>植物大战僵尸：前院小憩</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="title">植物大战僵尸·自制</div>
+      <div class="hud">
+        <div class="sun-box">☀️ <span id="sun-count">0</span></div>
+        <div class="level-box">关卡：<span id="level-label">-</span></div>
+        <button id="toggle-music" class="ghost">🔈 音乐</button>
+        <button id="restart" class="ghost">重新开始</button>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="plant-bar" id="plant-bar"></div>
+      <div class="tips">点击卡片选择植物，再点击草地种植。收集阳光，阻止僵尸进入左侧！</div>
+    </section>
+
+    <main class="play-area">
+      <div class="board" id="board">
+        <img class="board-bg" src="assets/background.svg" alt="草坪背景">
+        <div class="grid" id="grid"></div>
+        <div class="entities" id="entities"></div>
+        <div class="message" id="message"></div>
+      </div>
+      <aside class="sidebar">
+        <div class="card info">
+          <h3>闯关说明</h3>
+          <ul>
+            <li>每关僵尸更强、数量更多。</li>
+            <li>向日葵产出阳光，豌豆射手攻击，坚果墙防御。</li>
+            <li>点击掉落的阳光收集，合理布阵。</li>
+          </ul>
+        </div>
+        <div class="card info">
+          <h3>快捷键</h3>
+          <ul>
+            <li>数字键 1/2/3 选植物</li>
+            <li>空格：取消选择</li>
+            <li>R：快速重开本关</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
